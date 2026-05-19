@@ -1,0 +1,19 @@
+# Documentation files (keep only essential ones)
+TESTING_CHECKLIST.md
+PORTFOLIO_SUMMARY.md
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+npm-debug.log*
