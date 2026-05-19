@@ -136,6 +136,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Particle Background Generator
 function createParticles() {
+  // Skip particles on mobile for better performance
+  if (window.innerWidth <= 768) {
+    return;
+  }
+  
   const particlesContainer = document.createElement('div');
   particlesContainer.className = 'particles';
   document.body.appendChild(particlesContainer);
@@ -254,6 +259,11 @@ function initTypingAnimation() {
 
 // Parallax Effect for Hero Sections
 function initParallax() {
+  // Skip parallax on mobile
+  if (window.innerWidth <= 768) {
+    return;
+  }
+  
   window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallaxElements = document.querySelectorAll('.page-hero');

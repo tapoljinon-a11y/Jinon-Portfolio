@@ -1443,13 +1443,69 @@ body {
 
 /* Mobile Optimizations */
 @media (max-width: 768px) {
-  .contact-grid,
-  .project-showcase {
-    grid-template-columns: 1fr;
+  /* Increase base font size for better readability */
+  :root {
+    --font-size-base: 18px;
+    --font-size-sm: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 1.75rem;
+    --font-size-3xl: 2rem;
+    --font-size-4xl: 2.5rem;
   }
   
+  /* Larger touch targets */
+  .nav-links a,
+  .skill-badge,
+  .btn,
+  .back-to-top {
+    min-height: 48px;
+    min-width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Better spacing for mobile */
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .content-section {
+    padding: 2rem 0;
+  }
+  
+  /* Larger cards for easier tapping */
+  .media-card,
+  .achievement-card,
+  .contact-card,
+  .project-card {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Single column layouts */
+  .contact-grid,
+  .project-showcase,
+  .stats-container,
+  .skill-badges {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* Larger stat boxes */
+  .stat-box {
+    padding: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 3.5rem;
+  }
+  
+  /* Better quote section */
   .quote-text {
     font-size: var(--font-size-xl);
+    padding: 0 1rem;
   }
   
   .quote-section::before {
@@ -1458,8 +1514,187 @@ body {
     left: 20px;
   }
   
+  .quote-section {
+    padding: 3rem 1rem;
+  }
+  
+  /* Larger skill badges */
+  .skill-badge {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Better hero section */
+  .page-hero {
+    min-height: 250px;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  /* Larger navigation */
+  .nav-brand a {
+    font-size: 1.5rem;
+  }
+  
+  .nav-toggle {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  .hamburger {
+    width: 2.5rem;
+    height: 0.3rem;
+  }
+  
+  .hamburger::before,
+  .hamburger::after {
+    width: 2.5rem;
+    height: 0.3rem;
+  }
+  
+  /* Mobile menu improvements */
+  .nav-links {
+    width: 80%;
+    max-width: 350px;
+    padding: 4rem 2rem;
+  }
+  
+  .nav-links a {
+    font-size: 1.25rem;
+    padding: 1.25rem;
+    width: 100%;
+  }
+  
+  /* Better project cards */
   .project-card {
     margin-bottom: var(--spacing-lg);
+  }
+  
+  .project-image {
+    height: 250px;
+  }
+  
+  .project-content {
+    padding: 1.5rem;
+  }
+  
+  .project-title {
+    font-size: 1.5rem;
+  }
+  
+  .project-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  /* Larger contact cards */
+  .contact-icon {
+    font-size: 4rem;
+  }
+  
+  .contact-title {
+    font-size: 1.5rem;
+  }
+  
+  .contact-info {
+    font-size: 1.1rem;
+  }
+  
+  /* Better achievement cards */
+  .achievement-icon {
+    font-size: 4rem;
+  }
+  
+  .achievement-title {
+    font-size: 1.5rem;
+  }
+  
+  .achievement-desc {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  /* Larger back to top button */
+  .back-to-top {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  /* Better skill bars */
+  .skill-bar-fill {
+    height: 40px;
+    font-size: 1.1rem;
+    padding: 0 1.5rem;
+  }
+  
+  /* Reduce animations on mobile for better performance */
+  .particle {
+    display: none;
+  }
+  
+  /* Disable parallax on mobile */
+  .page-hero {
+    transform: none !important;
+  }
+  
+  /* Better focus areas list */
+  .section-body ul li {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+  }
+  
+  /* Better media grid */
+  .media-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .media-card figcaption {
+    padding: 1.5rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  /* Better footer */
+  .site-footer {
+    padding: 2rem 0;
+  }
+  
+  .site-footer p {
+    font-size: 1rem;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 375px) {
+  :root {
+    --font-size-base: 16px;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+  }
+  
+  .nav-links {
+    width: 85%;
   }
 }
 
